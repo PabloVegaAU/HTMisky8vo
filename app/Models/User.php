@@ -71,4 +71,19 @@ class User extends Authenticatable
     {
         return 'https://ui-avatars.com/api/?name=' . urlencode($this->username) . '&color=7F9CF5&background=EBF4FF';
     }
+
+    public function adminlte_image()
+    {
+        return 'https://ui-avatars.com/api/?name=' . urlencode($this->username) . '&color=7F9CF5&background=EBF4FF';
+    }
+
+    public function adminlte_desc()
+    {
+        return $this->username;
+    }
+
+    public function adminlte_profile_url()
+    {
+        return 'profile/username';
+    }
 }
